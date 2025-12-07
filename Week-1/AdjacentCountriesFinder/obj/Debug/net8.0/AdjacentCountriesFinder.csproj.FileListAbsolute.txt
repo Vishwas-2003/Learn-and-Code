@@ -1,0 +1,14 @@
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\bin\Debug\net8.0\AdjacentCountriesFinder.exe
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\bin\Debug\net8.0\AdjacentCountriesFinder.deps.json
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\bin\Debug\net8.0\AdjacentCountriesFinder.runtimeconfig.json
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\bin\Debug\net8.0\AdjacentCountriesFinder.dll
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\bin\Debug\net8.0\AdjacentCountriesFinder.pdb
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\obj\Debug\net8.0\AdjacentCountriesFinder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\obj\Debug\net8.0\AdjacentCountriesFinder.AssemblyInfoInputs.cache
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\obj\Debug\net8.0\AdjacentCountriesFinder.AssemblyInfo.cs
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\obj\Debug\net8.0\AdjacentCountriesFinder.csproj.CoreCompileInputs.cache
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\obj\Debug\net8.0\AdjacentCountriesFinder.dll
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\obj\Debug\net8.0\refint\AdjacentCountriesFinder.dll
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\obj\Debug\net8.0\AdjacentCountriesFinder.pdb
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\obj\Debug\net8.0\AdjacentCountriesFinder.genruntimeconfig.cache
+C:\Users\vishwas.v\source\repos\AdjacentCountriesFinder\obj\Debug\net8.0\ref\AdjacentCountriesFinder.dll
