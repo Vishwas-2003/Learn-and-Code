@@ -2,6 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+/Week-2/Assignments/SubArrayMeanCalculator/.vs/ProjectEvaluation
+/Week-2/Assignments/SubArrayMeanCalculator/.vs/SubArrayMeanCalculator.slnx/DesignTimeBuild
 /Week-2/LiscovSubstitutionPrinciple/bin/Debug/net10.0
 /Week-2/LiscovSubstitutionPrinciple/.vs/LiscovSubstitutionPrinciple.slnx
 /Week-2/LiscovSubstitutionPrinciple/obj/Debug/net10.0/refint
@@ -21,7 +23,6 @@
 /Week-2/SRP/obj/Debug/net10.0/SRP.csproj.FileListAbsolute.txt
 /Week-2/SRP/obj/Debug/net10.0/SRP.csproj.BuildWithSkipAnalyzers
 *.BuildWithSkipAnalyzers
-*.txt
 /Week-2/SRP/obj/Debug/net10.0
 /Week-2/OpenClosedPrinciple/obj/Debug/net10.0
 /Week-2/OpenClosedPrinciple/bin/Debug/net10.0
@@ -30,3 +31,9 @@
 /Week-2/DependencyInversionPrinciple/bin/Debug/net10.0
 /Week-2/DependencyInversionPrinciple/obj/Debug/net10.0/refint
 /Week-2/DependencyInversionPrinciple/obj/Debug/net10.0
+/Week-2/Assignments/SubArrayMeanCalculator/obj/Debug/net10.0
+/Week-2/Assignments/SubArrayMeanCalculator/bin/Debug/net10.0
+/Week-2/Assignments/CustomerSearch/obj/Debug/net10.0
+/Week-2/Assignments/CustomerSearch/bin/Debug/net10.0
+/Week-2/Assignments/GuessNumber/obj/Debug/net10.0
+/Week-2/Assignments/GuessNumber/bin/Debug/net10.0

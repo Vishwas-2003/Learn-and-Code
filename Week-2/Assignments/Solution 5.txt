@@ -1,0 +1,6 @@
+Solution 5:
+The class employee does not follow the principles of Clean code.
+1. Naming convention is not consistant - saveEmployeeTODatabase() should be saveEmployeeToDatabase() and also it should be saveEmployee() only.
+2. Both the entity properties and its function are in the same class. Can be divided into two, one for entity and other for the services for employee.
+3. It does not implement any interface which violates SOLID principle.
+4. isWorking() function is not a description name. It can be isEmployeeWorking()
