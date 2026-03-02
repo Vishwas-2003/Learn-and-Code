@@ -12,8 +12,8 @@ namespace DataProcessingSystem.Application.Services
             {
                 TotalRecords = list.Count,
                 ErrorCount = errorCount,
-                TotalValue = list.Sum(r => r.Value),
-                AverageValue = list.Any() ? list.Average(r => r.Value) : 0
+                TotalValue = list.Sum(record => record.Value),
+                AverageValue = list.Any() ? list.Average(record => record.Value) : 0
             };
         }
     }

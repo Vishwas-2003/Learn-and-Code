@@ -11,9 +11,9 @@ namespace DataProcessingSystem.Infrastructure.FileSystem
                 "ID,NAME,VALUE,DATE,DOUBLED_VALUE,SQUARED_VALUE"
             };
 
-            foreach (var r in records)
+            foreach (var record in records)
             {
-                lines.Add($"{r.Id},{r.Name},{r.Value},{r.Date:yyyy-MM-dd},{r.DoubledValue},{r.SquaredValue}");
+                lines.Add($"{record.Id},{record.Name},{record.Value},{record.Date:yyyy-MM-dd},{record.DoubledValue},{record.SquaredValue}");
             }
 
             File.WriteAllLines(path, lines);

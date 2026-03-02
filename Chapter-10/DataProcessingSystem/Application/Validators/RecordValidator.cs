@@ -19,6 +19,12 @@ namespace DataProcessingSystem.Application.Validators
                 return false;
             }
 
+            if (record.Value <= 0)
+            {
+                errorMessage = $"Record {record.Id} has invalid value. Value must be greater than 0.";
+                return false;
+            }
+
             errorMessage = null;
             return true;
         }
