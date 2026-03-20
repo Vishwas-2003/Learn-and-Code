@@ -1,0 +1,62 @@
+﻿﻿﻿﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Week-2/Assignments/SubArrayMeanCalculator/.vs/ProjectEvaluation
+/Week-2/Assignments/SubArrayMeanCalculator/.vs/SubArrayMeanCalculator.slnx/DesignTimeBuild
+/Week-2/LiscovSubstitutionPrinciple/bin/Debug/net10.0
+/Week-2/LiscovSubstitutionPrinciple/.vs/LiscovSubstitutionPrinciple.slnx
+/Week-2/LiscovSubstitutionPrinciple/obj/Debug/net10.0/refint
+/Week-2/LiscovSubstitutionPrinciple/obj/Debug/net10.0
+/Week-2/LiscovSubstitutionPrinciple/obj
+*.bin
+*.v2
+*.vsidx
+*.testlog
+*.manifest
+*.json
+*.suo
+*.cache
+*.props
+*.targets
+/Week-2/SRP/obj/Debug/net10.0/apphost.exe
+/Week-2/SRP/obj/Debug/net10.0/SRP.csproj.FileListAbsolute.txt
+/Week-2/SRP/obj/Debug/net10.0/SRP.csproj.BuildWithSkipAnalyzers
+*.BuildWithSkipAnalyzers
+/Week-2/SRP/obj/Debug/net10.0
+/Week-2/OpenClosedPrinciple/obj/Debug/net10.0
+/Week-2/OpenClosedPrinciple/bin/Debug/net10.0
+/Week-2/InterfaceSegregationPrinciple/bin/Debug/net10.0
+/Week-2/InterfaceSegregationPrinciple/obj/Debug/net10.0
+/Week-2/DependencyInversionPrinciple/bin/Debug/net10.0
+/Week-2/DependencyInversionPrinciple/obj/Debug/net10.0/refint
+/Week-2/DependencyInversionPrinciple/obj/Debug/net10.0
+/Week-2/Assignments/SubArrayMeanCalculator/obj/Debug/net10.0
+/Week-2/Assignments/SubArrayMeanCalculator/bin/Debug/net10.0
+/Week-2/Assignments/CustomerSearch/obj/Debug/net10.0
+/Week-2/Assignments/CustomerSearch/bin/Debug/net10.0
+/Week-2/Assignments/GuessNumber/obj/Debug/net10.0
+/Week-2/Assignments/GuessNumber/bin/Debug/net10.0
+/Week-3/BlogInfo/bin/Debug/net10.0
+/Week-3/BlogInfo/obj/Debug/net10.0
+/Week 1 to 4 Revised/Comments/OrderManagementSystem/obj/Debug/net10.0
+/Week 1 to 4 Revised/Comments/OrderManagementSystem/OrderManagementSystem.csproj
+/Week 1 to 4 Revised/Comments/OrderManagementSystem/OrderManagementSystem.slnx
+/Week 1 to 4 Revised/Formatting/PaymentManagementSystem/bin/Debug/net10.0
+/Week 1 to 4 Revised/Formatting/PaymentManagementSystem/Interfaces/INotificationService.cs
+/Week 1 to 4 Revised/Formatting/PaymentManagementSystem/obj/Debug/net10.0
+/Week-6/.vs/slnx.sqlite
+/Week-6/.vs/Week-6.slnx/v18
+/Chapter-10/DataProcessingSystem/obj/Debug/net10.0
+/Chapter-10/DataProcessingSystem/bin/Debug/net10.0
+/OOPS Assignemnt/VehicleManagementSystem/bin/Debug/net8.0
+*.dll
+*.exe
+*.txt
+/OOPS Assignemnt/VehicleManagementSystem/obj/Debug/net8.0
+/OOPS Assignment/.vs
+/OOPS Assignment/CreatorMonetization/bin
+/OOPS Assignment/CreatorMonetization/obj
+/OOPS Assignment/VehicleManagementSystem/bin/Release/net8.0
+/OOPS Assignment/VehicleManagementSystem/obj
+/OOPS Assignment/VehicleManagementSystem/bin/Debug/net8.0
