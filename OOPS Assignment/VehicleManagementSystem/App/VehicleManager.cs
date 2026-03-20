@@ -1,6 +1,6 @@
-using VehicleManagementSystem.Domain.Vehicles;
+using OOPSAssignment.VehicleManagementSystem.Domain.Vehicles;
 
-namespace VehicleManagementSystem.App;
+namespace OOPSAssignment.VehicleManagementSystem.App;
 
 public sealed class VehicleManager
 {
@@ -38,4 +38,3 @@ public sealed class VehicleManager
             vehicle.Start();
     }
 }
-

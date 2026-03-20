@@ -1,4 +1,4 @@
-namespace VehicleManagementSystem.Domain.Vehicles;
+namespace OOPSAssignment.VehicleManagementSystem.Domain.Vehicles;
 
 public interface IVehicle
 {
@@ -16,4 +16,3 @@ public interface IVehicle
     void ReplenishEnergy(decimal amountPercent);
     string GetDisplayInfo();
 }
-

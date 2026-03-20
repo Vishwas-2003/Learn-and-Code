@@ -1,7 +1,11 @@
-using VehicleManagementSystem.Domain.Energy;
+using OOPSAssignment.VehicleManagementSystem.Domain.Entities;
+using OOPSAssignment.VehicleManagementSystem.Domain.Energy;
 
-namespace VehicleManagementSystem.Domain.Vehicles;
+namespace OOPSAssignment.VehicleManagementSystem.Domain.Vehicles;
 
+/// <summary>
+/// Vehicle behavior; state lives on <see cref="VehicleEntity"/>.
+/// </summary>
 public abstract class Vehicle : IVehicle
 {
     private readonly IEnergyStore _energyStore;
@@ -9,26 +13,21 @@ public abstract class Vehicle : IVehicle
     private const double MinPriceUsd = 0;
     private const double MaxPriceUsd = 1_000_000;
 
-    protected Vehicle(
-        string make,
-        string model,
-        int year,
-        double price,
-        IEnergyStore energyStore)
+    protected Vehicle(VehicleEntity entity, IEnergyStore energyStore)
     {
-        Make = make;
-        Model = model;
-        Year = year;
-        Price = NormalizePrice(price);
+        Entity = entity;
+        Entity.Price = NormalizePrice(Entity.Price);
         _energyStore = energyStore;
     }
 
-    public string Make { get; }
-    public string Model { get; }
-    public int Year { get; }
-    public double Price { get; private set; }
+    protected VehicleEntity Entity { get; }
 
-    public bool IsRunning { get; private set; }
+    public string Make => Entity.Make;
+    public string Model => Entity.Model;
+    public int Year => Entity.Year;
+    public double Price => Entity.Price;
+
+    public bool IsRunning => Entity.IsRunning;
     public abstract string Kind { get; }
 
     public void Start()
@@ -39,13 +38,13 @@ public abstract class Vehicle : IVehicle
             return;
         }
 
-        IsRunning = true;
+        Entity.IsRunning = true;
         Console.WriteLine(StartMessage);
     }
 
     public void Stop()
     {
-        IsRunning = false;
+        Entity.IsRunning = false;
         Console.WriteLine($"{Make} {Model} stopped.");
     }
 
@@ -55,18 +54,24 @@ public abstract class Vehicle : IVehicle
             return;
 
         _energyStore.AddPercent(amountPercent);
+        SyncEnergyLevelToEntity(_energyStore.LevelPercent);
         Console.WriteLine($"{EnergyVerbPastTense}. {EnergyLevelLabel}: {_energyStore.LevelPercent}%");
     }
 
     public virtual string GetDisplayInfo() => $"{DisplayName}: {Year} {Make} {Model}, Price: ${Price}";
 
-    public void SetPrice(double price) => Price = NormalizePrice(price);
+    public void SetPrice(double price)
+    {
+        Entity.Price = NormalizePrice(price);
+    }
 
     protected abstract string DisplayName { get; }
     protected abstract string EnergyVerbPastTense { get; }
     protected abstract string EnergyLevelLabel { get; }
     protected abstract string CannotStartMessage { get; }
     protected abstract string StartMessage { get; }
+
+    protected abstract void SyncEnergyLevelToEntity(decimal levelPercent);
 
     private static double NormalizePrice(double price)
     {
@@ -82,4 +87,3 @@ public abstract class Vehicle : IVehicle
         return price;
     }
 }
-

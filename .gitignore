@@ -54,3 +54,9 @@
 *.exe
 *.txt
 /OOPS Assignemnt/VehicleManagementSystem/obj/Debug/net8.0
+/OOPS Assignment/.vs
+/OOPS Assignment/CreatorMonetization/bin
+/OOPS Assignment/CreatorMonetization/obj
+/OOPS Assignment/VehicleManagementSystem/bin/Release/net8.0
+/OOPS Assignment/VehicleManagementSystem/obj
+/OOPS Assignment/VehicleManagementSystem/bin/Debug/net8.0

@@ -1,22 +1,16 @@
-using VehicleManagementSystem.Domain.Energy;
+using OOPSAssignment.VehicleManagementSystem.Domain.Entities;
+using OOPSAssignment.VehicleManagementSystem.Domain.Energy;
 
-namespace VehicleManagementSystem.Domain.Vehicles;
+namespace OOPSAssignment.VehicleManagementSystem.Domain.Vehicles;
 
 public sealed class Motorcycle : Vehicle
 {
-    public Motorcycle(
-        string make,
-        string model,
-        int year,
-        double price,
-        Percentage initialFuelLevelPercent,
-        bool hasSidecar)
-        : base(make, model, year, price, new FuelTank(initialFuelLevelPercent))
+    public Motorcycle(MotorcycleEntity entity)
+        : base(entity, new FuelTank(Percentage.From(entity.FuelLevelPercent)))
     {
-        HasSidecar = hasSidecar;
     }
 
-    public bool HasSidecar { get; }
+    public bool HasSidecar => ((MotorcycleEntity)Entity).HasSidecar;
 
     protected override string DisplayName => "Motorcycle";
     protected override string EnergyVerbPastTense => "Refueled";
@@ -27,5 +21,7 @@ public sealed class Motorcycle : Vehicle
 
     public override string GetDisplayInfo()
         => $"{base.GetDisplayInfo()}, Sidecar: {HasSidecar}";
-}
 
+    protected override void SyncEnergyLevelToEntity(decimal levelPercent)
+        => ((MotorcycleEntity)Entity).FuelLevelPercent = levelPercent;
+}

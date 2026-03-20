@@ -1,11 +1,12 @@
-using VehicleManagementSystem.Domain.Energy;
+using OOPSAssignment.VehicleManagementSystem.Domain.Entities;
+using OOPSAssignment.VehicleManagementSystem.Domain.Energy;
 
-namespace VehicleManagementSystem.Domain.Vehicles;
+namespace OOPSAssignment.VehicleManagementSystem.Domain.Vehicles;
 
 public sealed class ElectricCar : Vehicle
 {
-    public ElectricCar(string make, string model, int year, double price, Percentage initialBatteryLevelPercent)
-        : base(make, model, year, price, new Battery(initialBatteryLevelPercent))
+    public ElectricCar(ElectricCarEntity entity)
+        : base(entity, new Battery(Percentage.From(entity.BatteryLevelPercent)))
     {
     }
 
@@ -15,5 +16,7 @@ public sealed class ElectricCar : Vehicle
     protected override string CannotStartMessage => "Cannot start - battery dead!";
     protected override string StartMessage => $"{Make} {Model} electric motor started.";
     public override string Kind => "Electric car";
-}
 
+    protected override void SyncEnergyLevelToEntity(decimal levelPercent)
+        => ((ElectricCarEntity)Entity).BatteryLevelPercent = levelPercent;
+}

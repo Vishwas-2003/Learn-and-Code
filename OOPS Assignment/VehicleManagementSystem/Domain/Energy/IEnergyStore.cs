@@ -1,4 +1,4 @@
-namespace VehicleManagementSystem.Domain.Energy;
+namespace OOPSAssignment.VehicleManagementSystem.Domain.Energy;
 
 public interface IEnergyStore
 {
