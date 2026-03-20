@@ -3,9 +3,6 @@ using OOPSAssignment.CreatorMonetization.Domain.Entities;
 
 namespace OOPSAssignment.CreatorMonetization.Domain.Services;
 
-/// <summary>
-/// Applies registered earning strategies to a <see cref="CreatorEntity"/> (separate from the entity).
-/// </summary>
 public sealed class CreatorEarningsService
 {
     private readonly List<IEarningStrategy> _earningStrategies = [];

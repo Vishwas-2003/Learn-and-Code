@@ -3,9 +3,6 @@ using OOPSAssignment.VehicleManagementSystem.Domain.Energy;
 
 namespace OOPSAssignment.VehicleManagementSystem.Domain.Vehicles;
 
-/// <summary>
-/// Vehicle behavior; state lives on <see cref="VehicleEntity"/>.
-/// </summary>
 public abstract class Vehicle : IVehicle
 {
     private readonly IEnergyStore _energyStore;

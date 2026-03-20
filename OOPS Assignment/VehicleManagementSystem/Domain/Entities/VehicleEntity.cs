@@ -1,8 +1,5 @@
 namespace OOPSAssignment.VehicleManagementSystem.Domain.Entities;
 
-/// <summary>
-/// Core vehicle data (entity). No operational behavior.
-/// </summary>
 public abstract class VehicleEntity
 {
     protected VehicleEntity(string make, string model, int year, double price)

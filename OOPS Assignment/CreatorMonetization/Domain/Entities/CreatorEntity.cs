@@ -1,8 +1,5 @@
 namespace OOPSAssignment.CreatorMonetization.Domain.Entities;
 
-/// <summary>
-/// Creator data only (entity). No earnings logic.
-/// </summary>
 public sealed class CreatorEntity
 {
     public CreatorEntity(string name, int views, int subscribers, double baseAmount)
