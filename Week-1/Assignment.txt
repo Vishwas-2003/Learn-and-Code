@@ -1,0 +1,86 @@
+Solution 1:
+
+import random
+def getRandomValue(maxValue):
+    rolledValue = random.randint(1, maxValue)
+    return rolledValue
+
+def main():
+    maxValue = 6
+    rollDice = True
+    while rollDice:
+        userInput = input("Ready to roll? Enter Q to Quit")
+        if userInput.lower() !="q":
+            rolledValue = getRandomValue(maxValue)
+            print("You have rolled a", rolledValue)
+        else:
+            rollDice = False
+
+
+
+
+Solution 2 :
+
+import random
+def isValid(value):
+    if value.isdigit() and 1<= int(value) <=100:
+        return True
+    else:
+        return False
+
+def main():
+    number = random.randint(1,100)
+    guessNotRequired = False
+    guessNumber = input("Guess a number between 1 and 100:")
+    numberOfGuess = 0
+    while not guessNotRequired:
+        if not isValid(guessNumber):
+            guessNumber = input("I wont count this one Please enter a number between 1 to 100")
+            continue
+        else:
+            numberOfGuess += 1
+            guessNumber = int(guessNumber)
+
+        if guessNumber < number:
+            guessNumber = input("Too low. Guess again")
+        elif guessNumber > number:
+            guessNumber = input("Too High. Guess again")
+        else:
+            print("You guessed it in", numberOfGuess, "guesses!")
+            guessNotRequired = True
+
+
+main()
+
+
+Solution 3 :
+
+def processForArmstrong(number):
+    # Initializing Sum and Number of Digits
+    sumOfPowerDigits = 0
+    numberOfDigits = 0
+
+    # Calculating Number of individual digits
+    tempNumber = number
+    while tempNumber > 0:
+        numberOfDigits = numberOfDigits + 1
+        tempNumber = tempNumber // 10
+
+    # Finding Armstrong Number
+    tempNumber = number
+    for number in range(1, tempNumber + 1):
+        remainder = tempNumber % 10
+        sumOfPowerDigits = sumOfPowerDigits + (remainder ** numberOfDigits)
+        tempNumber //= 10
+    return sumOfPowerDigits
+
+
+# End of Function
+
+# User Input
+number = int(input("\nPlease Enter the Number to Check for Armstrong: "))
+
+if (number == processForArmstrong(number)):
+    print("\n %d is Armstrong Number.\n" % number)
+else:
+    print("\n %d is Not a Armstrong Number.\n" % number)
