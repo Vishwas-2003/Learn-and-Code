@@ -1,21 +1,46 @@
 using DivisorPairs.Console;
 
+Console.WriteLine("Enter input using this format:");
+Console.WriteLine("First line: number of test cases");
+Console.WriteLine("Next lines: one upper bound per test case");
+Console.WriteLine("Example:");
+Console.WriteLine("1");
+Console.WriteLine("15");
+Console.WriteLine();
+
 var inputLines = new List<string>();
-string? line;
+var firstLine = Console.ReadLine();
 
-while ((line = Console.ReadLine()) is not null)
+if (string.IsNullOrWhiteSpace(firstLine))
 {
-    if (string.IsNullOrWhiteSpace(line))
-    {
-        continue;
-    }
-
-    inputLines.Add(line.Trim());
+    Console.WriteLine("Input was empty. Please provide at least one test case.");
+    return;
 }
 
-if (inputLines.Count == 0)
+inputLines.Add(firstLine.Trim());
+
+if (!int.TryParse(firstLine, out var testCaseCount))
 {
+    Console.WriteLine("Invalid first line. Please enter a valid integer for test case count.");
     return;
+}
+
+if (testCaseCount < 0)
+{
+    Console.WriteLine("Test case count cannot be negative.");
+    return;
+}
+
+for (var testCaseIndex = 0; testCaseIndex < testCaseCount; testCaseIndex++)
+{
+    var testCaseLine = Console.ReadLine();
+    if (string.IsNullOrWhiteSpace(testCaseLine))
+    {
+        Console.WriteLine("Missing test case value. Please provide one upper bound per test case.");
+        return;
+    }
+
+    inputLines.Add(testCaseLine.Trim());
 }
 
 var parser = new InputParser();
